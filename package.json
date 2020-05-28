@@ -1,0 +1,47 @@
+{
+  "name": "universal-ci",
+  "version": "0.0.2",
+  "author": "Flávio Carvalho",
+  "module": "dist/universal-ci.esm.js",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "prettier": "@colio/prettier-config",
+  "eslintConfig": {
+    "extends": [
+      "@colio/eslint-config/node"
+    ]
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "bin": {
+    "universal-ci": "./bin/universal-ci.js"
+  },
+  "scripts": {
+    "format:check": "colio-format-check",
+    "format:all": "colio-format-all",
+    "lint:check": "colio-eslint-check",
+    "lint:fix": "colio-eslint-fix",
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test"
+  },
+  "dependencies": {
+    "commander": "5.1.0",
+    "lodash": "4.17.15",
+    "yaml": "1.10.0"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.153",
+    "@colio/eslint-config": "^1.0.0",
+    "@colio/prettier-config": "^2.0.0",
+    "tsdx": "^0.13.2",
+    "tslib": "^2.0.0",
+    "typescript": "^3.9.3"
+  }
+}
